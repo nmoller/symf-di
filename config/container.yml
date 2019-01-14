@@ -1,0 +1,16 @@
+parameters:
+  db.hostname: db01
+  db.database: moodle
+  db.user: root
+  db.password: root
+
+services:
+  database:
+    class: Uqam\Moodle\DB\Mdl
+    arguments: ['%db.hostname%', '%db.database%','%db.user%','%db.password%']
+    public: true
+  inscription:
+    class: Uqam\Command\InscriptionCommand
+    public: true
+    calls:
+      - [setDB, ['@database']]

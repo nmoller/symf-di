@@ -1,0 +1,23 @@
+{
+    "name": "uqam/command",
+    "description": "Commands pour validation inscriptions",
+    "type": "project",
+    "require": {
+        "symfony/console": "^4.2",
+        "symfony/yaml": "^4.2",
+        "symfony/dependency-injection": "^4.2",
+        "symfony/config": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uqam\\": "src/Uqam"
+        }
+    },
+    "license": "WTFK",
+    "authors": [
+        {
+            "name": "Nelson Moller",
+            "email": "nmoller.c@gmail.com"
+        }
+    ]
+}
